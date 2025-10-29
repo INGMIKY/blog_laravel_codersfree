@@ -3,11 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Post extends Model
 {
     // si no mencionamos a que tabla se debe conectar, Laravel asume que es el plural del nombre del modelo y en minisculas
+    use HasFactory, Notifiable;
     
     protected $table = 'posts';
 
