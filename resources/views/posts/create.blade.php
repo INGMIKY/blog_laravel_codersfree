@@ -2,7 +2,7 @@
 
     <h1>Formulario para crear un nuevo post</h1>
 
-    <form action="/posts" method="POST">
+    <form action="{{route('posts.store')}}" method="POST">
 
         @csrf
 
