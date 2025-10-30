@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
 
 </head>
 <body>
-    <header>header</header>
 
     {{$slot}}
 
-    <footer>footer</footer>
+    
     
 </body>
 </html>
