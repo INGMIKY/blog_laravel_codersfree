@@ -17,10 +17,10 @@ Route::get('/home', HomeController::class);
 // Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
 // Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 // Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
-// Route::delete('/posts/{post}', [PostController::class, 'delete'])->name('posts.delete');
+// Route::delete('/posts/{post}', [PostController::class, 'delete'])->name('posts.destroy');
 
 
-Route::resource('articulos', PostController::class)->parameters(['articulos' => 'post'])->names('posts');
+Route::resource('posts', PostController::class);
 
 // Route::get('/prueba', function() {
 //     // Crear un nuevo post
