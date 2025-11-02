@@ -18,13 +18,25 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
-        $post = new Post();
-        $post->title= $request->title;
-        $post->slug= $request->slug;
-        $post->category = $request->category;
-        $post->content = $request->content;
 
-        $post->save();
+        // return $request->all();
+        
+        Post::create($request->all());
+
+        // Post::create([
+        //     'title' => $request->title,
+        //     'slug' => $request->slug,
+        //     'category' => $request->category,
+        //     'content' => $request->content,
+        // ]);
+
+        // $post = new Post();
+        // $post->title= $request->title;
+        // $post->slug= $request->slug;
+        // $post->category = $request->category;
+        // $post->content = $request->content;
+
+        // $post->save();
 
         return redirect()->route('posts.index');
     }
@@ -41,15 +53,17 @@ class PostController extends Controller
         return view('posts.edit', compact('post'));
     }
 
-    public function update(Request $request,Post $post){
+    public function update(Request $request, Post $post){
         // $post = Post::find($post);
 
-        $post->title= $request->title;
-        $post->slug= $request->slug;
-        $post->category = $request->category;
-        $post->content = $request->content;
+        $post->update($request->all());
+
+        // $post->title= $request->title;
+        // $post->slug= $request->slug;
+        // $post->category = $request->category;
+        // $post->content = $request->content;
         
-        $post->save();
+        // $post->save();
 
         return redirect()->route('posts.show', $post);
     }
