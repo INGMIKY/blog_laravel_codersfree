@@ -29,26 +29,26 @@ class StorePostRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'title.required' => 'El campo :attribute es obligatorio.',
-            'title.min' => 'El campo :attribute debe tener al menos :min caracteres.',
-            'title.max' => 'El campo :attribute no debe exceder de :max caracteres.',
-            'slug.required' => 'El campo :attribute es obligatorio.',
-            'slug.unique' => 'El :attribute ya está en uso. Por favor, elige otro.',
-            'category.required' => 'El campo :attribute es obligatorio.',
-            'content.required' => 'El campo :attribute es obligatorio.',
-        ];
-    }
+    // public function messages()
+    // {
+    //     return [
+    //         'title.required' => 'The :attribute field is required.',
+    //         'title.min' => 'The :attribute field must have at last :min character.',
+    //         'title.max' => 'The :attribute do not must more :max character.',
+    //         'slug.required' => 'The :attribute field is required .',
+    //         'slug.unique' => 'The :attribute is already used. please, choose another one.',
+    //         'category.required' => 'The :attribute field is required.',
+    //         'content.required' => 'The :attribute field is required.',
+    //     ];
+    // }
 
-    public function attributes()
-    {
-        return [
-            'title' => 'title',
-            'slug' => 'slug',
-            'category' => 'categoría',
-            'content' => 'contenido',
-        ];
-    }
+    // public function attributes()
+    // {
+    //     return [
+    //         'title' => 'title',
+    //         'slug' => 'slug',
+    //         'category' => 'categoría',
+    //         'content' => 'contenido',
+    //     ];
+    // }
 }
