@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Models\Phone;
 use App\Models\Post;
+use App\Models\User2;
 
 Route::get('/', function () {
     return view('welcome');
@@ -59,3 +61,22 @@ Route::resource('posts', PostController::class);
 //     // $post->delete();
 //     // return 'El post se ha eliminado correctamente';
 // });
+
+
+Route::get('/prueba', function() {
+    
+    // User2::create([
+    //     'name' => 'Miguel Barrera',
+    //     'email' => 'miguel@gmail.com',
+    //     'password' => bcrypt('12345678'),
+    // ]);
+
+    // Phone::create([
+    //     'number' => '987654321',
+    //     'user2_id' => 1,
+    // ]);
+
+    $user2 = User2::where('id', 1)->with('phone')->first();
+
+    return $user2;
+});
